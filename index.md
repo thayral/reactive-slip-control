@@ -19,18 +19,6 @@ CEA (Leti & List) · Université Paris-Saclay
 
 ---
 
-## Teaser
-
-<!-- TEMPLATE: GIF teaser (autoplay if it's a real GIF) -->
-<p>
-  <img src="assets/gifs/teaser.gif" width="820" alt="Teaser: reactive slip control demo">
-</p>
-
-<!-- TEMPLATE: short caption -->
-<em>Reactive slip control: fast tactile slip detection + analytic internal-force update to stabilize multi-finger grasps.</em>
-
----
-
 ## Video
 
 <!-- Vimeo embed (works on GitHub Pages) -->
