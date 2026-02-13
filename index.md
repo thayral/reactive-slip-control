@@ -19,7 +19,12 @@ CEA (Leti & List) · Université Paris-Saclay
 
 ---
 
-## Video
+
+## CONTEXT 
+Critical environments GIF + robotisation
+
+
+## GRIPPER
 
 <!-- Vimeo embed (works on GitHub Pages) -->
 <div style="max-width:900px;">
@@ -33,6 +38,13 @@ CEA (Leti & List) · Université Paris-Saclay
     </iframe>
   </div>
 </div>
+
+
+
+## FINGER SENSOR
+## maybe sensors signals (after problem)
+
+## CONTRIBUTIONS
 
 ---
 
@@ -76,18 +88,35 @@ We target **slip-aware force coordination**: increase stability while preserving
 
 ---
 
-## Code & Resources
-
-> Remplace les liens par tes repos / pages.
-
-- **Demo (minimal runnable example):** https://github.com/thayral/<demo-repo>
-- **Training / research code (implementation details):** https://github.com/thayral/<training-repo>
-- **Slides (full, for deep dive):** https://thayral.github.io/phd-defense-slides/
-- **Thesis manuscript (PDF):** https://github.com/thayral/<thesis-repo-or-pdf-link>
 
 ---
 
 ## Setup & benches
+
+## GIF CAROU + SIGNALS -> timing labels
+
+## GIF MULTI MOSAIC + DATASET FACTS
+## VISU CCL IMAGE RESULTS DELAY + ACC
+
+
+
+
+# BENCH RSC NANO image + signals
+# BENCH LOOP
+
+## PERTURB TAXO TRANSIENT AMBIENT
+## - > robust how ?
+# VISU ROBUST delta FN + ROB ACC
+
+
+## PROBLEM RSC
+## DEMO GEOM GIF
+## METHOD RSC OK
+## CONTACT POINTS (2 pages) 
+## valid geom pull GIF
+## exp full big ok
+
+## INTEGRATE CCL
 
 ### TraceBot / manipulation platform
 - Multi-finger gripper with **hybrid tactile sensing**
@@ -284,6 +313,19 @@ This section summarizes the optimized in-loop compute budget (excluding I/O-heav
   *Robotic gripper and control method*  
   M. Grossard, S. Aloui, T. Ayral — US Patent Application 19/011,931
 ---
+
+
+
+
+
+## Code & Resources
+
+> Remplace les liens par tes repos / pages.
+
+- **Demo (minimal runnable example):** https://github.com/thayral/<demo-repo>
+- **Training / research code (implementation details):** https://github.com/thayral/<training-repo>
+- **Slides (full, for deep dive):** https://thayral.github.io/phd-defense-slides/
+- **Thesis manuscript (PDF):** https://github.com/thayral/<thesis-repo-or-pdf-link>
 
 ## Contact
 
