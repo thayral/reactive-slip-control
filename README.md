@@ -5,7 +5,7 @@ Project page for my PhD work:
 Learning-based slip detection for adaptive grasp control in robotic manipulation
 
 
-[![Teaser](media/Trigrasp TEASER.png)](https://thayral.github.io/reactive-slip-control/)
+[![Teaser](media/Trigrasp-TEASER.png)](https://thayral.github.io/reactive-slip-control/)
 
 
 
