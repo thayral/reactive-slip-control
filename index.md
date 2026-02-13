@@ -42,25 +42,37 @@ Robotic manipulation in unstructured environments requires **stable grasps witho
 Humans solve this by sensing **incipient slip** and modulating grip forces rapidly.
 This project investigates **learning-based slip detection** integrated into an **interpretable, model-based grasp stabilization loop**, enabling fast reactions and robust behavior in multi-fingered grasps.
 
----
 
-## Publications
+## Problem: force coordination in multi-finger grasps {#problem}
 
-- **AIM 2023 (published)**  
-  *Spectro-Temporal Recurrent Neural Network for Robotic Slip Detection with Piezoelectric Tactile Sensor*  
-  Théo Ayral, Saifeddine Aloui, Mathieu Grossard
+In parallel-jaw grippers, preventing slip is often handled by a simple scalar increase of grip force.
+In multi-finger grasps, the same strategy can inject an undesired net wrench and destabilize the object.
+We target **slip-aware force coordination**: increase stability while preserving the object-level wrench.
 
-- **CoDIT 2026 (submitted)**  
-  *Robust Tactile Slip Detection under Manipulation Perturbations*  
-  Théo Ayral, Saifeddine Aloui, Mathieu Grossard
+<table>
+  <tr>
+    <td width="45%" valign="top" align="center">
+      <img src="media/huynh_2020.png" width="360" alt="Simple parallel-jaw gripper">
+      <br><br>
+      <strong>Simple gripper</strong>
+      <ul align="left">
+        <li><strong>Parallel jaws</strong>, single DoF</li>
+        <li><strong>Scalar</strong> grasp-effort command</li>
+      </ul>
+    </td>
+    <td width="55%" valign="top" align="center">
+      <img src="media/Trigrasp.png" width="460" alt="Multi-digit gripper grasp">
+      <br><br>
+      <strong>Multi-digit gripper</strong>
+      <ul align="left">
+        <li>Independent actuation of multiple-DoF fingers</li>
+        <li>Requires <strong>coordination</strong> of contact forces</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-- **ICRA 2026 (submitted)**  
-  *Reactive Slip Control in Multifingered Grasping: Hybrid Tactile Sensing and Internal-Force Optimization*  
-  Théo Ayral, Saifeddine Aloui, Mathieu Grossard
-
-- **Patent application (2025)**  
-  *Robotic gripper and control method*  
-  M. Grossard, S. Aloui, T. Ayral — US Patent Application 19/011,931
+<em>Takeaway: slip recovery in multi-finger grasps is not a scalar “grip harder” action — it must coordinate contact forces.</em>
 
 ---
 
@@ -114,6 +126,13 @@ We use a **hybrid learning + model-based** approach:
 <em>Overview of the reactive slip control (RSC) pipeline.</em>
 
 ---
+###  Contact point estimation
+
+
+    \includegraphics[width=\textwidth]{chap3/fig/coordinates image sensor (1).pdf}
+    \includegraphics[width=0.6\textwidth]{Backups/pzr points sim.png}%
+    \quad\includegraphics[width=0.3\textwidth]{Backups/pzr points visu.png}
+---
 
 ## Results
 
@@ -148,6 +167,25 @@ This section summarizes the optimized in-loop compute budget (excluding I/O-heav
 | QP solve (OSQP) for internal-force update | ~4 ms |
 | **Net slip-reaction latency (target)** | **~35–40 ms** |
 
+---
+
+## Publications
+
+- **AIM 2023 (published)**  
+  *Spectro-Temporal Recurrent Neural Network for Robotic Slip Detection with Piezoelectric Tactile Sensor*  
+  Théo Ayral, Saifeddine Aloui, Mathieu Grossard
+
+- **(in preparation)**  
+  *Robust Tactile Slip Detection under Manipulation Perturbations*  
+  Théo Ayral, Saifeddine Aloui, Mathieu Grossard
+
+- **ICRA 2026 (accepted)**  
+  *Reactive Slip Control in Multifingered Grasping: Hybrid Tactile Sensing and Internal-Force Optimization*  
+  Théo Ayral, Saifeddine Aloui, Mathieu Grossard
+
+- **Patent application (2025)**  
+  *Robotic gripper and control method*  
+  M. Grossard, S. Aloui, T. Ayral — US Patent Application 19/011,931
 ---
 
 ## Contact
