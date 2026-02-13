@@ -125,6 +125,25 @@ We use a **hybrid learning + model-based** approach:
 </p>
 <em>Overview of the reactive slip control (RSC) pipeline.</em>
 
+
+
+<table>
+  <tr>
+    <td valign="middle" align="center" width="33%">
+      <img src="media/rsc_slip.png" width="280" alt="Image 1">
+    </td>
+    <td valign="middle" align="center" width="33%">
+      <img src="media/rsc_feedback.png" width="280" alt="Image 2">
+    </td>
+    <td valign="middle" align="center" width="33%">
+      <img src="media/rsc_geom.png" width="280" alt="Image 3">
+    </td>
+  </tr>
+</table>
+
+
+
+
 ### Spectro-temporal features (PzE → FFT/PSD → Spectrogram)
 
 <div style="width:100%; margin: 0 auto;">
@@ -165,14 +184,14 @@ We use a **hybrid learning + model-based** approach:
       <em>Goal: reduce false alarms while preserving sensitivity to real slip.</em>
     </td>
     <td width="45%" align="center" valign="top">
-      <img src="media/perturb_work2.png" width="420" alt="Perturbation illustration">
+      <img src="media/perturbations_taxonomy.png" width="420" alt="Perturbation taxonomy">
     </td>
   </tr>
 </table>
 
-
-
-    \includegraphics[width=\linewidth]{chap2/fig/perturbdef/neo de Perturbations rarity labells.pdf}
+<p>
+  <img src="media/perturbations-rarity.png" width="900" alt="Perturbations imbalance">
+</p>
 
 
 
@@ -198,10 +217,7 @@ We use a **hybrid learning + model-based** approach:
   <img src="media/Trigrasp_full_vertical.png" width="900" alt="Experimental validation figure">
 </p>
 
-<!-- Optional: GIF showing the stabilization -->
-<p>
-  <img src="assets/gifs/result_trigrasp.gif" width="900" alt="Trigrasp stabilization GIF">
-</p>
+
 
 ---
 
