@@ -121,7 +121,7 @@ We use a **hybrid learning + model-based** approach:
 
 <!-- TEMPLATE: method schema -->
 <p>
-  <img src="media/rsc_overview.png" width="900" alt="Reactive slip control overview">
+  <img src="media/rsc_overview.png" width="700" alt="Reactive slip control overview">
 </p>
 <em>Overview of the reactive slip control (RSC) pipeline.</em>
 
@@ -129,13 +129,13 @@ We use a **hybrid learning + model-based** approach:
 
 <table>
   <tr>
-    <td valign="middle" align="center" width="33%">
+    <td valign="middle" align="center" width="38%">
       <img src="media/rsc_slip.png" width="280" alt="Image 1">
     </td>
-    <td valign="middle" align="center" width="33%">
+    <td valign="middle" align="center" width="23%">
       <img src="media/rsc_feedback.png" width="280" alt="Image 2">
     </td>
-    <td valign="middle" align="center" width="33%">
+    <td valign="middle" align="center" width="38%">
       <img src="media/rsc_geom.png" width="280" alt="Image 3">
     </td>
   </tr>
@@ -148,19 +148,19 @@ We use a **hybrid learning + model-based** approach:
 
 <div style="width:100%; margin: 0 auto;">
 
-  <video autoplay loop muted playsinline style="width:40%; height:auto; display:block; margin: 0 auto;">
+  <video autoplay loop muted playsinline style="width:33%; height:auto; display:block; margin: 0 auto;">
     <source src="media/fft_pze.mp4" type="video/mp4">
   </video>
 
-  <div style="height: 10px;"></div>
+  <div style="height: 5px;"></div>
 
-  <video autoplay loop muted playsinline style="width:30%; height:auto; display:block; margin: 0 auto;">
+  <video autoplay loop muted playsinline style="width:20%; height:auto; display:block; margin: 0 auto;">
     <source src="media/fft_frames.mp4" type="video/mp4">
   </video>
 
-  <div style="height: 10px;"></div>
+  <div style="height: 5px;"></div>
 
-  <video autoplay loop muted playsinline style="width:40%; height:auto; display:block; margin: 0 auto;">
+  <video autoplay loop muted playsinline style="width:33%; height:auto; display:block; margin: 0 auto;">
     <source src="media/fft_spectro.mp4" type="video/mp4">
   </video>
 
@@ -182,9 +182,12 @@ We use a **hybrid learning + model-based** approach:
         <li><strong>Δq</strong> — Actuation noise: structural vibrations</li>
       </ul>
       <em>Goal: reduce false alarms while preserving sensitivity to real slip.</em>
-    </td>
     <td width="45%" align="center" valign="top">
-      <img src="media/perturbations_taxonomy.png" width="420" alt="Perturbation taxonomy">
+      <img
+        src="media/perturbations_taxonomy.png"
+        width="420"
+        alt="Perturbation taxonomy"
+        style="transform: rotate(90deg);">
     </td>
   </tr>
 </table>
