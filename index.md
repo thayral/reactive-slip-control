@@ -1,0 +1,169 @@
+---
+layout: default
+title: Learning-based slip detection for adaptive grasp control
+---
+
+# Learning-based slip detection for adaptive grasp control in robotic manipulation
+
+**PhD Thesis Project — Théo Ayral**  
+CEA (Leti & List) · Université Paris-Saclay
+
+<p style="margin-top:0.5rem;">
+  <a href="#publications">Publications</a> ·
+  <a href="#code--resources">Code & Resources</a> ·
+  <a href="#setup--benches">Setup</a> ·
+  <a href="#method">Method</a> ·
+  <a href="#results">Results</a> ·
+  <a href="#latency">Latency</a>
+</p>
+
+---
+
+## Teaser
+
+<!-- TEMPLATE: GIF teaser (autoplay if it's a real GIF) -->
+<p>
+  <img src="assets/gifs/teaser.gif" width="820" alt="Teaser: reactive slip control demo">
+</p>
+
+<!-- TEMPLATE: short caption -->
+<em>Reactive slip control: fast tactile slip detection + analytic internal-force update to stabilize multi-finger grasps.</em>
+
+---
+
+## Video
+
+<!-- Vimeo embed (works on GitHub Pages) -->
+<div style="max-width:900px;">
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+    <iframe
+      src="https://player.vimeo.com/video/1056472782?h=0&title=0&byline=0&portrait=0"
+      style="position:absolute; top:0; left:0; width:100%; height:100%;"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+---
+
+## Context
+
+Robotic manipulation in unstructured environments requires **stable grasps without excessive force**.
+Humans solve this by sensing **incipient slip** and modulating grip forces rapidly.
+This project investigates **learning-based slip detection** integrated into an **interpretable, model-based grasp stabilization loop**, enabling fast reactions and robust behavior in multi-fingered grasps.
+
+---
+
+## Publications
+
+- **AIM 2023 (published)**  
+  *Spectro-Temporal Recurrent Neural Network for Robotic Slip Detection with Piezoelectric Tactile Sensor*  
+  Théo Ayral, Saifeddine Aloui, Mathieu Grossard
+
+- **CoDIT 2026 (submitted)**  
+  *Robust Tactile Slip Detection under Manipulation Perturbations*  
+  Théo Ayral, Saifeddine Aloui, Mathieu Grossard
+
+- **ICRA 2026 (submitted)**  
+  *Reactive Slip Control in Multifingered Grasping: Hybrid Tactile Sensing and Internal-Force Optimization*  
+  Théo Ayral, Saifeddine Aloui, Mathieu Grossard
+
+- **Patent application (2025)**  
+  *Robotic gripper and control method*  
+  M. Grossard, S. Aloui, T. Ayral — US Patent Application 19/011,931
+
+---
+
+## Code & Resources
+
+> Remplace les liens par tes repos / pages.
+
+- **Demo (minimal runnable example):** https://github.com/thayral/<demo-repo>
+- **Training / research code (implementation details):** https://github.com/thayral/<training-repo>
+- **Slides (full, for deep dive):** https://thayral.github.io/phd-defense-slides/
+- **Thesis manuscript (PDF):** https://github.com/thayral/<thesis-repo-or-pdf-link>
+
+---
+
+## Setup & benches
+
+### TraceBot / manipulation platform
+- Multi-finger gripper with **hybrid tactile sensing**
+- PzE: high-bandwidth friction-vibration sensing (slip cues)
+- PzR: spatial pressure/contact localization (contact geometry update)
+
+<!-- TEMPLATE: image (static figure / photo) -->
+<p>
+  <img src="assets/figures/setup_photo.png" width="820" alt="Experimental setup photo">
+</p>
+<em>Figure: Multi-finger gripper instrumented with hybrid tactile pads.</em>
+
+### Data collection benches
+We rely on automated and parameterized benches to generate labeled slip events under controlled variability (object, speed, force, grasps) and to collect **non-slip perturbations** that mimic slip-like dynamics.
+
+<!-- TEMPLATE: GIF for bench -->
+<p>
+  <img src="assets/gifs/bench.gif" width="820" alt="Automated slip bench">
+</p>
+<em>Automated bench for slip trajectory generation with ground-truth signals.</em>
+
+---
+
+## Method
+
+### Overview
+We use a **hybrid learning + model-based** approach:
+- **Learned slip perception** from high-bandwidth tactile cues (FFT + GRU)
+- **Online grasp model update** from contact localization
+- **Event-triggered internal-force optimization** to stabilize the grasp without disturbing the object wrench
+
+<!-- TEMPLATE: method schema -->
+<p>
+  <img src="assets/figures/method_overview.png" width="900" alt="Reactive slip control overview">
+</p>
+<em>Overview of the reactive slip control (RSC) pipeline.</em>
+
+---
+
+## Results
+
+### Experimental validation (example)
+**Asymmetric 3-finger grasp on a cylinder (planar)**  
+- Internal force coordination in **null space of the grasp**  
+- RSC triggers after ~**130 ms**  
+- ~**19 mm** object travel before stop
+
+<!-- Put your key result figure / montage here -->
+<p>
+  <img src="assets/figures/experimental_validation.png" width="900" alt="Experimental validation figure">
+</p>
+
+<!-- Optional: GIF showing the stabilization -->
+<p>
+  <img src="assets/gifs/result_trigrasp.gif" width="900" alt="Trigrasp stabilization GIF">
+</p>
+
+---
+
+## Latency
+
+### Real-time loop & latency budget (theoretical compute)
+This section summarizes the optimized in-loop compute budget (excluding I/O-heavy prototype constraints).
+
+| Block | Estimate |
+|------|----------|
+| FFT (C impl., 20 ms window) | < 0.1 ms compute (windowing delay ~13 ms) |
+| GRU inference (Python/ONNX) | ~3 ms (model decision delay ~24 ms) |
+| PzR → contact + 𝒩(G) update | ~5 ms |
+| QP solve (OSQP) for internal-force update | ~4 ms |
+| **Net slip-reaction latency (target)** | **~35–40 ms** |
+
+---
+
+## Contact
+
+- Email: <your.email@cea.fr>
+- Scholar / website: <link>
+- GitHub: https://github.com/thayral
