@@ -1,8 +1,6 @@
-# reactive-slip-control
 
-
-
-# Learning-Based Slip Detection for Adaptive Grasp Control
+# Learning-Based Slip Detection 
+# for Adaptive Grasp Control
 
 Project page for my PhD work:
 Learning-based slip detection for adaptive grasp control in robotic manipulation
