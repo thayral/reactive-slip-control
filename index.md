@@ -170,6 +170,33 @@ We use a **hybrid learning + model-based** approach:
 
 
 
+<table style="width:100%;">
+  <tr>
+    <!-- LEFT: big image -->
+    <td width="50%" valign="middle" align="center">
+      <img src="media/FFT_GRU.png" style="width:100%; height:auto; display:block;" alt="Method overview">
+    </td>
+
+    <!-- RIGHT: smaller image + bullets below -->
+    <td width="50%" valign="top" align="center">
+      <img src="media/GRU_d2lai.png" style="width:70%; height:auto; display:block; margin: 0 auto;" alt="FFT-GRU slip detection pipeline">
+
+      <div style="height:14px;"></div>
+
+      <div style="text-align:left; display:inline-block; width:90%;">
+        <ul>
+          <li>Identify <strong>spectral patterns</strong> of friction</li>
+          <li>Analyse <strong>temporal evolution</strong> with recurrence</li>
+          <li><strong>100Hz classification</strong> with binary classes</li>
+          <li><strong>Training</strong> with binary cross-entropy (BCE)</li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+
 ## Generating perturbations for training {#perturbations}
 
 <table>
