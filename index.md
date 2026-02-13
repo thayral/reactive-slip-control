@@ -121,41 +121,36 @@ We use a **hybrid learning + model-based** approach:
 
 <!-- TEMPLATE: method schema -->
 <p>
-  <img src="assets/figures/rsc_overview.png" width="900" alt="Reactive slip control overview">
+  <img src="media/rsc_overview.png" width="900" alt="Reactive slip control overview">
 </p>
 <em>Overview of the reactive slip control (RSC) pipeline.</em>
 
+### Spectro-temporal features (PzE → FFT/PSD → Spectrogram)
 
-### Spectro-temporal features (PzE signal → FFT/PSD → Spectrogram)
+<div style="max-width: 980px; margin: 0 auto;">
 
-<table>
-  <tr>
-    <!-- LEFT: stacked signal + spectrogram -->
-    <td width="68%" valign="top">
-      <strong>PzE signal (sliding window)</strong><br><br>
-      <video autoplay loop muted playsinline width="100%">
-        <source src="media/fft_pze.mp4" type="video/mp4">
-      </video>
+  <p><strong>PzE signal (sliding window)</strong></p>
+  <video autoplay loop muted playsinline style="width:100%; height:auto; display:block; margin: 0 auto;">
+    <source src="media/fft_pze.mp4" type="video/mp4">
+  </video>
 
-      <br><br>
+  <div style="height: 18px;"></div>
 
-      <strong>Spectrogram (built over time)</strong><br><br>
-      <video autoplay loop muted playsinline width="100%">
-        <source src="media/fft_spectro.mp4" type="video/mp4">
-      </video>
-    </td>
+  <p><strong>FFT → PSD</strong></p>
+  <video autoplay loop muted playsinline style="width:100%; height:auto; display:block; margin: 0 auto;">
+    <source src="media/fft_frames.mp4" type="video/mp4">
+  </video>
 
-    <!-- RIGHT: tall FFT/PSD -->
-    <td width="32%" valign="top" align="center">
-      <strong>FFT → PSD</strong><br><br>
-      <video autoplay loop muted playsinline width="100%">
-        <source src="media/fft_frames.mp4" type="video/mp4">
-      </video>
-    </td>
-  </tr>
-</table>
+  <div style="height: 18px;"></div>
 
-<em>High-bandwidth PzE signals are processed in short windows. FFT yields PSD features; successive spectra build the spectrogram used for slip classification.</em>
+  <p><strong>Spectrogram (built over time)</strong></p>
+  <video autoplay loop muted playsinline style="width:100%; height:auto; display:block; margin: 0 auto;">
+    <source src="media/fft_spectro.mp4" type="video/mp4">
+  </video>
+
+</div>
+
+<em>We process high-bandwidth PzE tactile signals in short windows, extract frequency-domain PSD features via FFT, and build a spectrogram for slip classification.</em>
 
 
 
