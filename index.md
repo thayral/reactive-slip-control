@@ -127,24 +127,24 @@ We use a **hybrid learning + model-based** approach:
 
 ### Spectro-temporal features (PzE → FFT/PSD → Spectrogram)
 
-<div style="max-width: 980px; margin: 0 auto;">
+<div style="width:100%; margin: 0 auto;">
 
   <p><strong>PzE signal (sliding window)</strong></p>
-  <video autoplay loop muted playsinline style="width:100%; height:auto; display:block; margin: 0 auto;">
+  <video autoplay loop muted playsinline style="width:50%; height:auto; display:block; margin: 0 auto;">
     <source src="media/fft_pze.mp4" type="video/mp4">
   </video>
 
   <div style="height: 18px;"></div>
 
   <p><strong>FFT → PSD</strong></p>
-  <video autoplay loop muted playsinline style="width:100%; height:auto; display:block; margin: 0 auto;">
+  <video autoplay loop muted playsinline style="width:30%; height:auto; display:block; margin: 0 auto;">
     <source src="media/fft_frames.mp4" type="video/mp4">
   </video>
 
   <div style="height: 18px;"></div>
 
   <p><strong>Spectrogram (built over time)</strong></p>
-  <video autoplay loop muted playsinline style="width:100%; height:auto; display:block; margin: 0 auto;">
+  <video autoplay loop muted playsinline style="width:50%; height:auto; display:block; margin: 0 auto;">
     <source src="media/fft_spectro.mp4" type="video/mp4">
   </video>
 
