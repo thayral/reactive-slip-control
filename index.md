@@ -40,6 +40,9 @@ Critical environments GIF + robotisation
 </div>
 
 
+## GRIPPER MOSAIC GIF
+## GRIPPER 3 views
+## GRIPPER BIMANUAL
 
 ## FINGER SENSOR
 ## maybe sensors signals (after problem)
@@ -98,7 +101,13 @@ We target **slip-aware force coordination**: increase stability while preserving
 ## GIF MULTI MOSAIC + DATASET FACTS
 ## VISU CCL IMAGE RESULTS DELAY + ACC
 
-
+pzr_points_visu.png
+pzr_points_sim.png
+coordinates_image_sensor.png
+exp_20240312_191525_run_20240312_191700_1757_noslip_run_torques_tau_merge_reel_rsc_fn.png
+setuplab.png
+forFig6-start_31956.png
+sensorshybrid.PNG
 
 
 # BENCH RSC NANO image + signals
