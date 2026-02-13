@@ -144,7 +144,7 @@ We use a **hybrid learning + model-based** approach:
 
 <!-- Put your key result figure / montage here -->
 <p>
-  <img src="assets/figures/experimental_validation.png" width="900" alt="Experimental validation figure">
+  <img src="media/Trigrasp_full_vertical.png" width="900" alt="Experimental validation figure">
 </p>
 
 <!-- Optional: GIF showing the stabilization -->
