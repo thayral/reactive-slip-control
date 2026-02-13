@@ -119,11 +119,11 @@ We use a **hybrid learning + model-based** approach:
 - **Online grasp model update** from contact localization
 - **Event-triggered internal-force optimization** to stabilize the grasp without disturbing the object wrench
 
-<!-- TEMPLATE: method schema -->
+<!--
 <p>
   <img src="media/rsc_overview.png" width="700" alt="Reactive slip control overview">
 </p>
-<em>Overview of the reactive slip control (RSC) pipeline.</em>
+-->
 
 
 
