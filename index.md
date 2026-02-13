@@ -121,11 +121,70 @@ We use a **hybrid learning + model-based** approach:
 
 <!-- TEMPLATE: method schema -->
 <p>
-  <img src="assets/figures/method_overview.png" width="900" alt="Reactive slip control overview">
+  <img src="assets/figures/rsc_overview.png" width="900" alt="Reactive slip control overview">
 </p>
 <em>Overview of the reactive slip control (RSC) pipeline.</em>
 
----
+
+### Spectro-temporal features (PzE signal → FFT/PSD → Spectrogram)
+
+<table>
+  <tr>
+    <!-- LEFT: stacked signal + spectrogram -->
+    <td width="68%" valign="top">
+      <strong>PzE signal (sliding window)</strong><br><br>
+      <video autoplay loop muted playsinline width="100%">
+        <source src="media/fft_pze.mp4" type="video/mp4">
+      </video>
+
+      <br><br>
+
+      <strong>Spectrogram (built over time)</strong><br><br>
+      <video autoplay loop muted playsinline width="100%">
+        <source src="media/fft_spectro.mp4" type="video/mp4">
+      </video>
+    </td>
+
+    <!-- RIGHT: tall FFT/PSD -->
+    <td width="32%" valign="top" align="center">
+      <strong>FFT → PSD</strong><br><br>
+      <video autoplay loop muted playsinline width="100%">
+        <source src="media/fft_frames.mp4" type="video/mp4">
+      </video>
+    </td>
+  </tr>
+</table>
+
+<em>High-bandwidth PzE signals are processed in short windows. FFT yields PSD features; successive spectra build the spectrogram used for slip classification.</em>
+
+
+
+## Generating perturbations for training {#perturbations}
+
+<table>
+  <tr>
+    <td width="55%" valign="top">
+      <strong>Perturbation taxonomy</strong>
+      <ul>
+        <li><strong>ΔF<sub>n</sub></strong> — Grasp effort variations: normal force (tighten / release)</li>
+        <li><strong>ΔF<sub>t</sub></strong> — External load variations: tangential load (shear / traction)</li>
+        <li><strong>Δq</strong> — Actuation noise: structural vibrations</li>
+      </ul>
+      <em>Goal: reduce false alarms while preserving sensitivity to real slip.</em>
+    </td>
+    <td width="45%" align="center" valign="top">
+      <img src="media/perturb_work2.png" width="420" alt="Perturbation illustration">
+    </td>
+  </tr>
+</table>
+
+
+
+    \includegraphics[width=\linewidth]{chap2/fig/perturbdef/neo de Perturbations rarity labells.pdf}
+
+
+
+    
 ###  Contact point estimation
 
 
