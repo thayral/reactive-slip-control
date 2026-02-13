@@ -133,15 +133,15 @@ We use a **hybrid learning + model-based** approach:
     <source src="media/fft_pze.mp4" type="video/mp4">
   </video>
 
-  <div style="height: 18px;"></div>
+  <div style="height: 10px;"></div>
 
   <video autoplay loop muted playsinline style="width:30%; height:auto; display:block; margin: 0 auto;">
     <source src="media/fft_frames.mp4" type="video/mp4">
   </video>
 
-  <div style="height: 18px;"></div>
+  <div style="height: 10px;"></div>
 
-  <video autoplay loop muted playsinline style="width:30%; height:auto; display:block; margin: 0 auto;">
+  <video autoplay loop muted playsinline style="width:40%; height:auto; display:block; margin: 0 auto;">
     <source src="media/fft_spectro.mp4" type="video/mp4">
   </video>
 
