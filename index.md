@@ -40,22 +40,26 @@ US Patent Application 19/011,931, 2025
 <div style="max-width:920px; margin:24px auto; padding:0 16px;">
 
   <div style="width:42%; margin:0 auto;">
-    <a href="https://thayral.github.io/PhD-manipulation/" style="text-decoration:none;">
+    <a href="https://thayral.github.io/PhD-manipulation/" style="text-decoration:none; color:inherit;">
       <video autoplay loop muted playsinline style="width:100%; height:auto; display:block;">
         <source src="media/tracebot-process.mp4" type="video/mp4">
       </video>
 
       <div style="height:8px;"></div>
 
-      <img src="media/grippermorphism.png" style="width:100%; height:auto; display:block;" alt="Project context teaser">
+      <img src="media/grippermorphism.png" style="width:100%; height:auto; display:block;" alt="TraceBot use-case teaser">
     </a>
 
-    <div style="margin-top:6px; display:flex; justify-content:space-between; align-items:flex-end;">
-      <div style="font-size:0.95em; color:#444;">
-        <strong>Project context</strong> — platform & use-case background (TraceBot)
+    <div style="margin-top:8px; display:flex; justify-content:space-between; align-items:flex-end; gap:10px;">
+      <div style="font-size:0.95em; color:#444; line-height:1.2;">
+        <strong>TraceBot use-case & platform context</strong><br>
+        <a href="https://thayral.github.io/PhD-manipulation/" style="color:#444; text-decoration:underline;">
+          Learn more on my PhD page (setup, sensors, demos)
+        </a>
       </div>
-      <a href="https://thayral.github.io/PhD-manipulation/">
-        <img src="media/TraceBOT_logo.png" style="width:80px; height:auto;" alt="TraceBot logo">
+
+      <a href="https://thayral.github.io/PhD-manipulation/" title="PhD page: platform context">
+        <img src="media/TraceBOT_logo.png" style="width:78px; height:auto;" alt="TraceBot logo">
       </a>
     </div>
   </div>
@@ -63,10 +67,6 @@ US Patent Application 19/011,931, 2025
 </div>
 
 
-
-## Modular, multifingered gripper
-
-<img src="media/three_views_of_gripper.png" width="360">
 
 
 
