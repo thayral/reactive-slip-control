@@ -3,6 +3,18 @@ layout: default
 title: Learning-based slip detection for adaptive grasp control
 ---
 
+
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+
 # Learning-based slip detection for adaptive grasp control in robotic manipulation
 
 
@@ -136,10 +148,6 @@ We target **slip-aware force coordination**: increase stability while preserving
 
 
 
-<em>Takeaway: slip recovery in multi-finger grasps is not a scalar “grip harder” action — it must coordinate contact forces.</em>
-
-
-
 
 
 
@@ -183,6 +191,26 @@ We target **slip-aware force coordination**: increase stability while preserving
       <em>
         Internal forces injected in the null-space of the grasp matrix
         $\mathcal{N}(G)$ redistribute contact forces without disturbing object equilibrium.
+      </em>
+    </td>
+  </tr>
+
+
+
+  <!-- Row 3: equation / explanation -->
+  <tr>
+<td width="50%" align="center" valign="middle" style="padding:8px;">
+  <div style="margin:6px 0;">
+    \[
+    \|\mathbf{f}_1\| = \|\mathbf{f}_2\| = \|\mathbf{f}_3\|
+    \]
+  </div>
+  <em>Uniform force magnitudes ignore grasp geometry and lead to slip.</em>
+</td>
+    <td width="50%" align="center" valign="middle" style="padding:8px;">
+      <em>
+        Internal forces injected in the null-space of the grasp matrix
+        \(\mathcal{N}(G)\) redistribute contact forces without disturbing object equilibrium.
       </em>
     </td>
   </tr>
