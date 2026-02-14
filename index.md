@@ -291,7 +291,7 @@ We use a **hybrid learning + model-based** approach, with **two pipelines in par
 - ~**19 mm** object travel before stop
 
 <p>
-  <img src="media/Trigrasp_full_vertical.png" width="900" alt="Experimental validation figure">
+  <img src="media/Trigrasp_full_vertical.png" width="600" alt="Experimental validation figure">
 </p>
 
 
