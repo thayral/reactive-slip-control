@@ -20,8 +20,59 @@ CEA (Leti & List) · Université Paris-Saclay
 ---
 
 
-## CONTEXT 
-Critical environments GIF + robotisation
+**Paper accepted at ICRA 2026**
+*Reactive Slip Control in Multifingered Grasping: Hybrid Tactile Sensing and Internal-Force Optimization*
+Théo Ayral, Saifeddine Aloui, Mathieu Grossard
+
+
+**Patent application:**
+Robotic gripper and control method
+M Grossard, S Aloui, T AYRAL
+US Patent Application 19/011,931, 2025
+
+
+## CONTEXT TEASER
+(TraceBot Project)
+
+<div style="border:1px solid #ddd; border-radius:6px; padding:12px; margin:24px 0; background:#fafafa;">
+  <table style="width:100%; border-collapse:collapse;">
+    <tr>
+      <td width="18%" valign="middle" align="center">
+        <a href="https://www.tracebot.eu/">
+          <img src="media/tracebot_logo.png" style="width:90px; height:auto;" alt="TraceBot logo">
+        </a>
+      </td>
+      <td width="82%" valign="middle">
+        <strong>Project context — TraceBot</strong><br>
+        This work builds on the TraceBot project, a research platform for tactile-driven robotic manipulation.
+        <br>
+        <a href="https://github.com/thayral/PhD-manipulation">→ Learn more about the TraceBot platform</a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+## CONTRIBUTION
+*Closed-loop grasp adjustment*
+Stabilize multi-fingered grasp without explicit friction models.
+
+Closed-loop adaptation of grasp forces
+Stabilize multi-finger grasps by injecting internal forces without explicit friction models
+Tactile feedback loop leveraging slip detection for short reaction time
+
+keywords : grasp stability, internal forces, slip detection, multifingered gripper
+---
+
+## Context
+
+Robotic manipulation in unstructured environments requires **stable grasps without excessive force**.
+Humans solve this by sensing **incipient slip** and modulating grip forces rapidly.
+This project investigates **learning-based slip detection** integrated into an **interpretable, model-based grasp stabilization loop**, enabling fast reactions and robust behavior in multi-fingered grasps.
+
+
+
+
 
 
 ## GRIPPER
@@ -42,20 +93,9 @@ Critical environments GIF + robotisation
 
 ## GRIPPER MOSAIC GIF
 ## GRIPPER 3 views
-## GRIPPER BIMANUAL
 
-## FINGER SENSOR
-## maybe sensors signals (after problem)
 
-## CONTRIBUTIONS
 
----
-
-## Context
-
-Robotic manipulation in unstructured environments requires **stable grasps without excessive force**.
-Humans solve this by sensing **incipient slip** and modulating grip forces rapidly.
-This project investigates **learning-based slip detection** integrated into an **interpretable, model-based grasp stabilization loop**, enabling fast reactions and robust behavior in multi-fingered grasps.
 
 
 ## Problem: force coordination in multi-finger grasps {#problem}
@@ -89,69 +129,33 @@ We target **slip-aware force coordination**: increase stability while preserving
 
 <em>Takeaway: slip recovery in multi-finger grasps is not a scalar “grip harder” action — it must coordinate contact forces.</em>
 
----
 
-
----
-
-## Setup & benches
-
-## GIF CAROU + SIGNALS -> timing labels
-
-## GIF MULTI MOSAIC + DATASET FACTS
-## VISU CCL IMAGE RESULTS DELAY + ACC
-
-pzr_points_visu.png
-pzr_points_sim.png
-coordinates_image_sensor.png
-exp_20240312_191525_run_20240312_191700_1757_noslip_run_torques_tau_merge_reel_rsc_fn.png
-setuplab.png
-forFig6-start_31956.png
-sensorshybrid.PNG
-
-
-# BENCH RSC NANO image + signals
-# BENCH LOOP
-
-## PERTURB TAXO TRANSIENT AMBIENT
-## - > robust how ?
-# VISU ROBUST delta FN + ROB ACC
-
-
-## PROBLEM RSC
++ PFANNE
+  
 ## DEMO GEOM GIF
-## METHOD RSC OK
-## CONTACT POINTS (2 pages) 
-## valid geom pull GIF
-## exp full big ok
-
-## INTEGRATE CCL
-
-### TraceBot / manipulation platform
-- Multi-finger gripper with **hybrid tactile sensing**
-- PzE: high-bandwidth friction-vibration sensing (slip cues)
-- PzR: spatial pressure/contact localization (contact geometry update)
-
-<!-- TEMPLATE: image (static figure / photo) -->
-<p>
-  <img src="assets/figures/setup_photo.png" width="820" alt="Experimental setup photo">
-</p>
-<em>Figure: Multi-finger gripper instrumented with hybrid tactile pads.</em>
-
-### Data collection benches
-We rely on automated and parameterized benches to generate labeled slip events under controlled variability (object, speed, force, grasps) and to collect **non-slip perturbations** that mimic slip-like dynamics.
-
-<!-- TEMPLATE: GIF for bench -->
-<p>
-  <img src="assets/gifs/bench.gif" width="820" alt="Automated slip bench">
-</p>
-<em>Automated bench for slip trajectory generation with ground-truth signals.</em>
 
 ---
 
-## Method
 
-### Overview
+
+## Tactile fingers - hybrid (PzE + PzR)
+
+
+<div style="width:50%; margin:16px auto;">
+  <img src="media/sensorshybrid.PNG" style="width:100%; height:auto; display:block;">
+</div>
+
+##  sensors signals 
+
+
+
+
+
+
+---
+
+
+## Method Overview
 We use a **hybrid learning + model-based** approach:
 - **Learned slip perception** from high-bandwidth tactile cues (FFT + GRU)
 - **Online grasp model update** from contact localization
@@ -180,99 +184,60 @@ We use a **hybrid learning + model-based** approach:
 </table>
 
 
+### Slip detection
 
-
-### Spectro-temporal features (PzE → FFT/PSD → Spectrogram)
-
-<div style="width:100%; margin: 0 auto;">
-
-  <video autoplay loop muted playsinline style="width:33%; height:auto; display:block; margin: 0 auto;">
-    <source src="media/fft_pze.mp4" type="video/mp4">
-  </video>
-
-  <div style="height: 5px;"></div>
-
-  <video autoplay loop muted playsinline style="width:20%; height:auto; display:block; margin: 0 auto;">
-    <source src="media/fft_frames.mp4" type="video/mp4">
-  </video>
-
-  <div style="height: 5px;"></div>
-
-  <video autoplay loop muted playsinline style="width:33%; height:auto; display:block; margin: 0 auto;">
-    <source src="media/fft_spectro.mp4" type="video/mp4">
-  </video>
-
+<div style="border:1px solid #ddd; border-radius:6px; padding:12px; margin:24px 0; background:#fafafa;">
+  <table style="width:100%; border-collapse:collapse;">
+    <tr>
+      <td width="30%" valign="middle" align="center">
+        <img src="media/setuplab.png" style="width:100%; height:auto;" alt="Slip detection setup">
+      </td>
+      <td width="30%" valign="middle" align="center">
+        <img src="media/forFig6-start_31956.png" style="width:100%; height:auto;" alt="Slip detection setup">
+      </td>
+      <td width="70%" valign="middle">
+        <strong>Slip detection module</strong><br>
+        The reactive slip controller relies on a learning-based tactile slip detector trained on dedicated benches.
+        Data collection, perturbation modeling, and training are detailed separately.
+        <br>
+        <a href="https://github.com/thayral/tactile-slip-detection-pze">
+          → Learn more about tactile slip detection
+        </a>
+      </td>
+    </tr>
+  </table>
 </div>
-
-<em>We process high-bandwidth PzE tactile signals in short windows, extract frequency-domain PSD features via FFT, and build a spectrogram for slip classification.</em>
-
-
-
-<table style="width:100%;">
-  <tr>
-    <!-- LEFT: big image -->
-    <td width="50%" valign="middle" align="center">
-      <img src="media/FFT_GRU.png" style="width:100%; height:auto; display:block;" alt="Method overview">
-    </td>
-
-    <!-- RIGHT: smaller image + bullets below -->
-    <td width="50%" valign="top" align="center">
-      <img src="media/GRU_d2lai.png" style="width:70%; height:auto; display:block; margin: 0 auto;" alt="FFT-GRU slip detection pipeline">
-
-      <div style="height:14px;"></div>
-
-      <div style="text-align:left; display:inline-block; width:90%;">
-        <ul>
-          <li>Identify <strong>spectral patterns</strong> of friction</li>
-          <li>Analyse <strong>temporal evolution</strong> with recurrence</li>
-          <li><strong>100Hz classification</strong> with binary classes</li>
-          <li><strong>Training</strong> with binary cross-entropy (BCE)</li>
-        </ul>
-      </div>
-    </td>
-  </tr>
-</table>
-
-
-
-## Generating perturbations for training {#perturbations}
-
-<table>
-  <tr>
-    <td width="55%" valign="top">
-      <strong>Perturbation taxonomy</strong>
-      <ul>
-        <li><strong>ΔF<sub>n</sub></strong> — Grasp effort variations: normal force (tighten / release)</li>
-        <li><strong>ΔF<sub>t</sub></strong> — External load variations: tangential load (shear / traction)</li>
-        <li><strong>Δq</strong> — Actuation noise: structural vibrations</li>
-      </ul>
-      <em>Goal: reduce false alarms while preserving sensitivity to real slip.</em>
-    <td width="45%" align="center" valign="top">
-      <img
-        src="media/perturbations_taxonomy.png"
-        width="420"
-        alt="Perturbation taxonomy"
-        style="transform: rotate(90deg);">
-    </td>
-  </tr>
-</table>
-
-<p>
-  <img src="media/perturbations-rarity.png" width="900" alt="Perturbations imbalance">
-</p>
-
 
 
     
-###  Contact point estimation
+### Contact point estimation
 
+<div style="max-width:920px; margin:0 auto; padding:0 16px;">
 
-    \includegraphics[width=\textwidth]{chap3/fig/coordinates image sensor (1).pdf}
-    \includegraphics[width=0.6\textwidth]{Backups/pzr points sim.png}%
-    \quad\includegraphics[width=0.3\textwidth]{Backups/pzr points visu.png}
+  <div style="margin:16px auto;">
+    <img src="media/coordinates_image_sensor.png" style="width:100%; height:auto; display:block;" alt="Coordinate frames and tactile sensor reference">
+  </div>
+
+  <table style="width:100%; border-collapse:collapse;">
+    <tr>
+      <td width="67%" valign="middle" align="center" style="padding:6px;">
+        <img src="media/pzr_points_sim.png" style="width:100%; height:auto; display:block; margin:0 auto;" alt="Contact point estimation in simulation">
+      </td>
+      <td width="33%" valign="middle" align="center" style="padding:6px;">
+        <img src="media/pzr_points_visu.png" style="width:100%; height:auto; display:block; margin:0 auto;" alt="Contact point visualization from PzR array">
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+    
 ---
 
-## Results
+
+## valid geom pull GIF
+
+
 
 ### Experimental validation (example)
 **Asymmetric 3-finger grasp on a cylinder (planar)**  
@@ -280,7 +245,6 @@ We use a **hybrid learning + model-based** approach:
 - RSC triggers after ~**130 ms**  
 - ~**19 mm** object travel before stop
 
-<!-- Put your key result figure / montage here -->
 <p>
   <img src="media/Trigrasp_full_vertical.png" width="900" alt="Experimental validation figure">
 </p>
@@ -291,8 +255,8 @@ We use a **hybrid learning + model-based** approach:
 
 ## Latency
 
-### Real-time loop & latency budget (theoretical compute)
-This section summarizes the optimized in-loop compute budget (excluding I/O-heavy prototype constraints).
+### Real-time loop & latency budget - theoretical compute
+(optimized in-loop compute budget excluding I/O-heavy prototype constraints).
 
 | Block | Estimate |
 |------|----------|
@@ -302,42 +266,17 @@ This section summarizes the optimized in-loop compute budget (excluding I/O-heav
 | QP solve (OSQP) for internal-force update | ~4 ms |
 | **Net slip-reaction latency (target)** | **~35–40 ms** |
 
----
 
-## Publications
-
-- **AIM 2023 (published)**  
-  *Spectro-Temporal Recurrent Neural Network for Robotic Slip Detection with Piezoelectric Tactile Sensor*  
-  Théo Ayral, Saifeddine Aloui, Mathieu Grossard
-
-- **(in preparation)**  
-  *Robust Tactile Slip Detection under Manipulation Perturbations*  
-  Théo Ayral, Saifeddine Aloui, Mathieu Grossard
-
-- **ICRA 2026 (accepted)**  
-  *Reactive Slip Control in Multifingered Grasping: Hybrid Tactile Sensing and Internal-Force Optimization*  
-  Théo Ayral, Saifeddine Aloui, Mathieu Grossard
-
-- **Patent application (2025)**  
-  *Robotic gripper and control method*  
-  M. Grossard, S. Aloui, T. Ayral — US Patent Application 19/011,931
 ---
 
 
+
+
+## INTEGRATE CCL
 
 
 
 ## Code & Resources
 
-> Remplace les liens par tes repos / pages.
-
-- **Demo (minimal runnable example):** https://github.com/thayral/<demo-repo>
-- **Training / research code (implementation details):** https://github.com/thayral/<training-repo>
-- **Slides (full, for deep dive):** https://thayral.github.io/phd-defense-slides/
-- **Thesis manuscript (PDF):** https://github.com/thayral/<thesis-repo-or-pdf-link>
-
 ## Contact
-
-- Email: <your.email@cea.fr>
-- Scholar / website: <link>
-- GitHub: https://github.com/thayral
+Théo AYRAL
