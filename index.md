@@ -276,6 +276,41 @@ We use a **hybrid learning + model-based** approach:
 
 ## valid geom pull GIF
 
+### Reactive Slip Control in action: “peg-out” canister extraction
+
+<table style="width:100%; border-collapse:collapse; margin: 24px 0;">
+  <tr>
+    <td width="50%" align="center" valign="middle" style="padding:8px;">
+      <strong>Baseline → Failure (insufficient grasp force)</strong>
+    </td>
+    <td width="50%" align="center" valign="middle" style="padding:8px;">
+      <strong>RSC → Success (slip-triggered force increase)</strong>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="50%" align="center" valign="middle" style="padding:8px;">
+      <video autoplay loop muted playsinline style="width:95%; height:auto; display:block; margin:0 auto;">
+        <source src="media/canister_failure.mp4" type="video/mp4">
+      </video>
+    </td>
+    <td width="50%" align="center" valign="middle" style="padding:8px;">
+      <video autoplay loop muted playsinline style="width:95%; height:auto; display:block; margin:0 auto;">
+        <source src="media/canister_rsc_success.mp4" type="video/mp4">
+      </video>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="50%" align="center" valign="middle" style="padding:8px;">
+      <em>Object remains docked despite lifting motion.</em>
+    </td>
+    <td width="50%" align="center" valign="middle" style="padding:8px;">
+      <em>Slip detected early → grasp effort increases → extraction succeeds.</em>
+    </td>
+  </tr>
+</table>
+
 
 
 ### Experimental validation (example)
