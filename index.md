@@ -274,9 +274,24 @@ We use a **hybrid learning + model-based** approach:
 ---
 
 
-## valid geom pull GIF
 
-### Reactive Slip Control in action: “peg-out” canister extraction
+### Experimental validation
+
+
+**Asymmetric 3-finger grasp on a cylinder (planar)**  
+- Internal force coordination in **null space of the grasp**  
+- RSC triggers after ~**130 ms**  
+- ~**19 mm** object travel before stop
+
+<p>
+  <img src="media/Trigrasp_full_vertical.png" width="900" alt="Experimental validation figure">
+</p>
+
+
+
+
+### Reactive Slip Control in action
+**“peg-out” canister extraction**
 
 <table style="width:100%; border-collapse:collapse; margin: 24px 0;">
   <tr>
@@ -310,19 +325,6 @@ We use a **hybrid learning + model-based** approach:
     </td>
   </tr>
 </table>
-
-
-
-### Experimental validation (example)
-**Asymmetric 3-finger grasp on a cylinder (planar)**  
-- Internal force coordination in **null space of the grasp**  
-- RSC triggers after ~**130 ms**  
-- ~**19 mm** object travel before stop
-
-<p>
-  <img src="media/Trigrasp_full_vertical.png" width="900" alt="Experimental validation figure">
-</p>
-
 
 
 ---
