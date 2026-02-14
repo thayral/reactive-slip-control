@@ -196,25 +196,6 @@ We target **slip-aware force coordination**: increase stability while preserving
   </tr>
 
 
-
-  <!-- Row 3: equation / explanation -->
-  <tr>
-<td width="50%" align="center" valign="middle" style="padding:8px;">
-  <div style="margin:6px 0;">
-    \[
-    \|\mathbf{f}_1\| = \|\mathbf{f}_2\| = \|\mathbf{f}_3\|
-    \]
-  </div>
-  <em>Uniform force magnitudes ignore grasp geometry and lead to slip.</em>
-</td>
-    <td width="50%" align="center" valign="middle" style="padding:8px;">
-      <em>
-        Internal forces injected in the null-space of the grasp matrix
-        \(\mathcal{N}(G)\) redistribute contact forces without disturbing object equilibrium.
-      </em>
-    </td>
-  </tr>
-
 </table>
 
 
