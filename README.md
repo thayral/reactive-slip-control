@@ -19,7 +19,7 @@ Learning-based slip detection for adaptive grasp control in robotic manipulation
 
 
 **Paper accepted at ICRA 2026**
-Reactive Slip Control in Multifingered Grasping: Hybrid Tactile Sensing and Internal-Force Optimization
+*Reactive Slip Control in Multifingered Grasping: Hybrid Tactile Sensing and Internal-Force Optimization*
 Théo Ayral, Saifeddine Aloui, Mathieu Grossard
 
 
