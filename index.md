@@ -239,54 +239,9 @@ We use a **hybrid learning + model-based** approach, with **two pipelines in par
 
 
 
-### Slip detection
-
-<div style="border:1px solid #ddd; border-radius:6px; padding:12px; margin:24px 0; background:#fafafa;">
-  <table style="width:100%; border-collapse:collapse;">
-    <tr>
-      <td width="30%" valign="middle" align="center">
-        <img src="media/setuplab.png" style="width:100%; height:auto;" alt="Slip detection setup">
-      </td>
-      <td width="30%" valign="middle" align="center">
-        <img src="media/forFig6-start_31956.png" style="width:100%; height:auto;" alt="Slip detection setup">
-      </td>
-      <td width="70%" valign="middle">
-        <strong>Slip detection module</strong><br>
-        The reactive slip controller relies on a learning-based tactile slip detector trained on dedicated benches.
-        Data collection, perturbation modeling, and training are detailed separately.
-        <br>
-        <a href="https://github.com/thayral/tactile-slip-detection-pze">
-          → Learn more about tactile slip detection
-        </a>
-      </td>
-    </tr>
-  </table>
-</div>
 
 
-    
-### Contact point estimation
-
-<div style="max-width:920px; margin:0 auto; padding:0 16px;">
-
-  <div style="margin:16px auto;">
-    <img src="media/coordinates_image_sensor.png" style="width:100%; height:auto; display:block;" alt="Coordinate frames and tactile sensor reference">
-  </div>
-
-  <table style="width:100%; border-collapse:collapse;">
-    <tr>
-      <td width="67%" valign="middle" align="center" style="padding:6px;">
-        <img src="media/pzr_points_sim.png" style="width:100%; height:auto; display:block; margin:0 auto;" alt="Contact point estimation in simulation">
-      </td>
-      <td width="33%" valign="middle" align="center" style="padding:6px;">
-        <img src="media/pzr_points_visu.png" style="width:100%; height:auto; display:block; margin:0 auto;" alt="Contact point visualization from PzR array">
-      </td>
-    </tr>
-  </table>
-
-</div>
-
-    <details>
+<details>
   <summary><strong>Grasp geometry (PzR): contact point estimation</strong></summary>
 
   <div style="max-width:920px; margin:14px auto; padding:0 16px; color:#444;">
