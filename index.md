@@ -357,9 +357,11 @@ We use a **hybrid learning + model-based** approach, with **two pipelines in par
 Théo Ayral, Saifeddine Aloui, Mathieu Grossard
 
 
+
 ## Contact
 Théo AYRAL
 
+➡️ This work is part of the PhD thesis  
+**Learning-based slip detection for adaptive grasp control**  
 CEA (Leti & List) · Université Paris-Saclay
-
 [https://github.com/thayral/PhD-manipulation](https://github.com/thayral/PhD-manipulation)
