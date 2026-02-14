@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Learning-based slip detection for adaptive grasp control
+title: Reactive Slip Control in Multifingered Grasping
 ---
 
 
@@ -15,10 +15,15 @@ title: Learning-based slip detection for adaptive grasp control
 
 
 
-# Learning-based slip detection for adaptive grasp control in robotic manipulation
+# Reactive Slip Control in Multifingered Grasping
+Hybrid Tactile Sensing and Internal-Force Optimization
+
+**Paper accepted at ICRA 2026**
 
 
-
+Robotic manipulation in unstructured environments requires **stable grasps without excessive force**.
+Humans solve this by sensing **incipient slip** and modulating grip forces rapidly.
+This project investigates **learning-based slip detection** integrated into an **interpretable, model-based grasp stabilization loop**, enabling fast reactions and robust behavior in multi-fingered grasps.
 
 
 
@@ -36,18 +41,10 @@ keywords : grasp stability, internal forces, slip detection, multifingered gripp
 ---
 
 
-**Paper accepted at ICRA 2026**
 
-
-
-**Patent application:**
-Robotic gripper and control method
-M Grossard, S Aloui, T AYRAL
-US Patent Application 19/011,931, 2025
 
 
 ## Context project
-(TraceBot Project)
 <div style="max-width:920px; margin:24px auto; padding:0 16px;">
 
   <div style="width:42%; margin:0 auto;">
@@ -80,15 +77,6 @@ US Patent Application 19/011,931, 2025
 
 
 
-
-## Context
-
-Robotic manipulation in unstructured environments requires **stable grasps without excessive force**.
-Humans solve this by sensing **incipient slip** and modulating grip forces rapidly.
-This project investigates **learning-based slip detection** integrated into an **interpretable, model-based grasp stabilization loop**, enabling fast reactions and robust behavior in multi-fingered grasps.
-
-
-
 ## CONTRIBUTION
 *Closed-loop grasp adjustment*
 Stabilize multi-fingered grasp without explicit friction models.
@@ -97,7 +85,7 @@ Closed-loop adaptation of grasp forces
 Stabilize multi-finger grasps by injecting internal forces without explicit friction models
 Tactile feedback loop leveraging slip detection for short reaction time
 
-
+---
 
 
 ## Problem: force coordination in multi-finger grasps {#problem}
@@ -213,10 +201,7 @@ We target **slip-aware force coordination**: increase stability while preserving
 
 
 
----
 
-
-## Method Overview
 
 ## Method Overview
 We use a **hybrid learning + model-based** approach, with **two pipelines in parallel** and coupled through an **event-triggered feedback loop**:
@@ -298,7 +283,7 @@ We use a **hybrid learning + model-based** approach, with **two pipelines in par
 
 
 
-### Experimental validation
+## Experimental validation
 
 
 **Asymmetric 3-finger grasp on a cylinder (planar)**  
@@ -313,7 +298,7 @@ We use a **hybrid learning + model-based** approach, with **two pipelines in par
 
 
 
-### Reactive Slip Control in action
+## Reactive Slip Control in action
 **“peg-out” canister extraction**
 
 <table style="width:100%; border-collapse:collapse; margin: 24px 0;">
