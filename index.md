@@ -8,6 +8,10 @@ title: Learning-based slip detection for adaptive grasp control
 **PhD Thesis Project — Théo Ayral**  
 CEA (Leti & List) · Université Paris-Saclay
 
+
+
+keywords : grasp stability, internal forces, slip detection, multifingered gripper
+
 <p style="margin-top:0.5rem;">
   <a href="#publications">Publications</a> ·
   <a href="#code--resources">Code & Resources</a> ·
@@ -31,11 +35,11 @@ M Grossard, S Aloui, T AYRAL
 US Patent Application 19/011,931, 2025
 
 
-## CONTEXT TEASER
+## Context project
 (TraceBot Project)
 <div style="max-width:920px; margin:24px auto; padding:0 16px;">
 
-  <div style="width:62%; margin:0 auto;">
+  <div style="width:42%; margin:0 auto;">
     <a href="https://thayral.github.io/PhD-manipulation/" style="text-decoration:none;">
       <video autoplay loop muted playsinline style="width:100%; height:auto; display:block;">
         <source src="media/tracebot-process.mp4" type="video/mp4">
@@ -60,16 +64,11 @@ US Patent Application 19/011,931, 2025
 
 
 
-## CONTRIBUTION
-*Closed-loop grasp adjustment*
-Stabilize multi-fingered grasp without explicit friction models.
+## Modular, multifingered gripper
 
-Closed-loop adaptation of grasp forces
-Stabilize multi-finger grasps by injecting internal forces without explicit friction models
-Tactile feedback loop leveraging slip detection for short reaction time
+<img src="media/three_views_of_gripper.png" width="360">
 
-keywords : grasp stability, internal forces, slip detection, multifingered gripper
----
+
 
 ## Context
 
@@ -79,14 +78,13 @@ This project investigates **learning-based slip detection** integrated into an *
 
 
 
+## CONTRIBUTION
+*Closed-loop grasp adjustment*
+Stabilize multi-fingered grasp without explicit friction models.
 
-
-
-## Modular, multifingered gripper
-
-
-<img src="media/three_views_of_gripper.png" width="360">
-
+Closed-loop adaptation of grasp forces
+Stabilize multi-finger grasps by injecting internal forces without explicit friction models
+Tactile feedback loop leveraging slip detection for short reaction time
 
 
 
@@ -99,7 +97,7 @@ We target **slip-aware force coordination**: increase stability while preserving
 
 <table>
   <tr>
-    <td width="45%" valign="top" align="center">
+    <td width="25%" valign="top" align="center">
       <img src="media/huynh_2020.png" width="360" alt="Simple parallel-jaw gripper">
       <br><br>
       <strong>Simple gripper</strong>
@@ -108,7 +106,7 @@ We target **slip-aware force coordination**: increase stability while preserving
         <li><strong>Scalar</strong> grasp-effort command</li>
       </ul>
     </td>
-    <td width="55%" valign="top" align="center">
+    <td width="25%" valign="top" align="center">
       <img src="media/Trigrasp.png" width="460" alt="Multi-digit gripper grasp">
       <br><br>
       <strong>Multi-digit gripper</strong>
@@ -123,9 +121,57 @@ We target **slip-aware force coordination**: increase stability while preserving
 <em>Takeaway: slip recovery in multi-finger grasps is not a scalar “grip harder” action — it must coordinate contact forces.</em>
 
 
-+ PFANNE
++ PFANNE  ref ? 
   
-## DEMO GEOM GIF
+
+
+### Why internal forces matter
+
+<table style="width:100%; border-collapse:collapse; margin: 24px 0;">
+  
+  <!-- Row 1: headers -->
+  <tr>
+    <td width="50%" align="center" valign="middle" style="padding:8px;">
+      <strong>Uniform forces → Failure</strong>
+    </td>
+    <td width="50%" align="center" valign="middle" style="padding:8px;">
+      <strong>Internal force coordination → Stable grasp</strong>
+    </td>
+  </tr>
+
+  <!-- Row 2: videos -->
+  <tr>
+    <td width="50%" align="center" valign="middle" style="padding:8px;">
+      <video autoplay loop muted playsinline style="width:95%; height:auto; display:block; margin:0 auto;">
+        <source src="media/grasp_no_coordination.mp4" type="video/mp4">
+      </video>
+    </td>
+    <td width="50%" align="center" valign="middle" style="padding:8px;">
+      <video autoplay loop muted playsinline style="width:95%; height:auto; display:block; margin:0 auto;">
+        <source src="media/grasp_with_coordination.mp4" type="video/mp4">
+      </video>
+    </td>
+  </tr>
+
+  <!-- Row 3: equation / explanation -->
+  <tr>
+    <td width="50%" align="center" valign="middle" style="padding:8px;">
+      $$
+      \|\mathbf{f}_1\| = \|\mathbf{f}_2\| = \|\mathbf{f}_3\|
+      $$
+      <em>Uniform force magnitudes ignore grasp geometry and lead to slip.</em>
+    </td>
+    <td width="50%" align="center" valign="middle" style="padding:8px;">
+      <em>
+        Internal forces injected in the null-space of the grasp matrix
+        $\mathcal{N}(G)$ redistribute contact forces without disturbing object equilibrium.
+      </em>
+    </td>
+  </tr>
+
+</table>
+
+
 
 ---
 
