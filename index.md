@@ -5,8 +5,8 @@ title: Learning-based slip detection for adaptive grasp control
 
 # Learning-based slip detection for adaptive grasp control in robotic manipulation
 
-**PhD Thesis Project — Théo Ayral**  
-CEA (Leti & List) · Université Paris-Saclay
+
+
 
 
 
@@ -25,8 +25,7 @@ keywords : grasp stability, internal forces, slip detection, multifingered gripp
 
 
 **Paper accepted at ICRA 2026**
-*Reactive Slip Control in Multifingered Grasping: Hybrid Tactile Sensing and Internal-Force Optimization*
-Théo Ayral, Saifeddine Aloui, Mathieu Grossard
+
 
 
 **Patent application:**
@@ -97,7 +96,7 @@ We target **slip-aware force coordination**: increase stability while preserving
 
 <table>
   <tr>
-    <td width="25%" valign="top" align="center">
+    <td width="20%" valign="top" align="center">
       <img src="media/huynh_2020.png" width="360" alt="Simple parallel-jaw gripper">
       <br><br>
       <strong>Simple gripper</strong>
@@ -106,7 +105,7 @@ We target **slip-aware force coordination**: increase stability while preserving
         <li><strong>Scalar</strong> grasp-effort command</li>
       </ul>
     </td>
-    <td width="25%" valign="top" align="center">
+    <td width="20%" valign="top" align="center">
       <img src="media/Trigrasp.png" width="460" alt="Multi-digit gripper grasp">
       <br><br>
       <strong>Multi-digit gripper</strong>
@@ -223,6 +222,58 @@ We use a **hybrid learning + model-based** approach:
 </table>
 
 
+
+## Method Overview
+
+We run **two pipelines in parallel** and couple them through an **event-triggered feedback loop**:
+- **Slip perception** (PzE): FFT/GRU detects incipient slip from tactile vibrations
+- **Grasp update & control** (PzR + model): contact localization → grasp modeling → internal-force optimization
+
+<table style="width:100%; border-collapse:collapse; margin:16px 0;">
+  <tr>
+    <td valign="middle" align="center" width="38%">
+      <img src="media/rsc_slip.png" style="width:100%; height:auto; display:block;" alt="Slip perception pipeline (PzE)">
+    </td>
+    <td valign="middle" align="center" width="24%">
+      <img src="media/rsc_feedback.png" style="width:100%; height:auto; display:block;" alt="Event-triggered feedback loop">
+    </td>
+    <td valign="middle" align="center" width="38%">
+      <img src="media/rsc_geom.png" style="width:100%; height:auto; display:block;" alt="Grasp modeling + internal-force optimization (PzR)">
+    </td>
+  </tr>
+</table>
+
+<em>Overview: perception and control run concurrently; slip events trigger internal-force reallocation to stabilize the grasp.</em>
+
+
+<details>
+  <summary><strong>Slip perception (PzE): training benches and signals</strong></summary>
+
+  <div style="border:1px solid #ddd; border-radius:6px; padding:12px; margin:14px 0; background:#fafafa;">
+    <table style="width:100%; border-collapse:collapse;">
+      <tr>
+        <td width="22%" valign="middle" align="center" style="padding:6px;">
+          <img src="media/setuplab.png" style="width:100%; height:auto; display:block;" alt="Slip detection bench">
+        </td>
+        <td width="22%" valign="middle" align="center" style="padding:6px;">
+          <img src="media/forFig6-start_31956.png" style="width:100%; height:auto; display:block;" alt="Example slip signal">
+        </td>
+        <td width="56%" valign="middle" style="padding:6px; color:#444;">
+          <strong>Slip detection module</strong><br>
+          The controller relies on a learning-based slip detector trained on dedicated benches.
+          Data collection, perturbation modeling, and training are detailed on the project page.<br>
+          <a href="https://github.com/thayral/tactile-slip-detection-pze">
+            → Learn more about tactile slip detection
+          </a>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</details>
+
+
+
 ### Slip detection
 
 <div style="border:1px solid #ddd; border-radius:6px; padding:12px; margin:24px 0; background:#fafafa;">
@@ -270,7 +321,31 @@ We use a **hybrid learning + model-based** approach:
 
 </div>
 
-    
+    <details>
+  <summary><strong>Grasp geometry (PzR): contact point estimation</strong></summary>
+
+  <div style="max-width:920px; margin:14px auto; padding:0 16px; color:#444;">
+    Contact points are estimated from the PzR pressure map and mapped from <em>sensor coordinates</em> to <em>finger/world coordinates</em>
+    to update grasp geometry online.
+
+    <div style="margin:16px auto;">
+      <img src="media/coordinates_image_sensor.png" style="width:100%; height:auto; display:block;" alt="Coordinate frames and tactile sensor reference">
+    </div>
+
+    <table style="width:100%; border-collapse:collapse;">
+      <tr>
+        <td width="67%" valign="middle" align="center" style="padding:6px;">
+          <img src="media/pzr_points_sim.png" style="width:100%; height:auto; display:block; margin:0 auto;" alt="Contact point estimation in simulation">
+        </td>
+        <td width="33%" valign="middle" align="center" style="padding:6px;">
+          <img src="media/pzr_points_visu.png" style="width:100%; height:auto; display:block; margin:0 auto;" alt="Contact point visualization from PzR array">
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</details>
+
 ---
 
 
@@ -344,15 +419,11 @@ We use a **hybrid learning + model-based** approach:
 
 
 ---
+**Paper accepted at ICRA 2026**
+*Reactive Slip Control in Multifingered Grasping: Hybrid Tactile Sensing and Internal-Force Optimization*
+Théo Ayral, Saifeddine Aloui, Mathieu Grossard
 
-
-
-
-## INTEGRATE CCL
-
-
-
-## Code & Resources
 
 ## Contact
 Théo AYRAL
+CEA (Leti & List) · Université Paris-Saclay
