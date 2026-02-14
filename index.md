@@ -33,24 +33,31 @@ US Patent Application 19/011,931, 2025
 
 ## CONTEXT TEASER
 (TraceBot Project)
+<div style="max-width:920px; margin:24px auto; padding:0 16px;">
 
-<div style="border:1px solid #ddd; border-radius:6px; padding:12px; margin:24px 0; background:#fafafa;">
-  <table style="width:100%; border-collapse:collapse;">
-    <tr>
-      <td width="18%" valign="middle" align="center">
-        <a href="https://www.tracebot.eu/">
-          <img src="media/tracebot_logo.png" style="width:90px; height:auto;" alt="TraceBot logo">
-        </a>
-      </td>
-      <td width="82%" valign="middle">
-        <strong>Project context — TraceBot</strong><br>
-        This work builds on the TraceBot project, a research platform for tactile-driven robotic manipulation.
-        <br>
-        <a href="https://github.com/thayral/PhD-manipulation">→ Learn more about the TraceBot platform</a>
-      </td>
-    </tr>
-  </table>
+  <div style="width:62%; margin:0 auto;">
+    <a href="https://thayral.github.io/PhD-manipulation/" style="text-decoration:none;">
+      <video autoplay loop muted playsinline style="width:100%; height:auto; display:block;">
+        <source src="media/tracebot-process.mp4" type="video/mp4">
+      </video>
+
+      <div style="height:8px;"></div>
+
+      <img src="media/grippermorphism.png" style="width:100%; height:auto; display:block;" alt="Project context teaser">
+    </a>
+
+    <div style="margin-top:6px; display:flex; justify-content:space-between; align-items:flex-end;">
+      <div style="font-size:0.95em; color:#444;">
+        <strong>Project context</strong> — platform & use-case background (TraceBot)
+      </div>
+      <a href="https://thayral.github.io/PhD-manipulation/">
+        <img src="media/TraceBOT_logo.png" style="width:80px; height:auto;" alt="TraceBot logo">
+      </a>
+    </div>
+  </div>
+
 </div>
+
 
 
 ## CONTRIBUTION
@@ -75,24 +82,10 @@ This project investigates **learning-based slip detection** integrated into an *
 
 
 
-## GRIPPER
-
-<!-- Vimeo embed (works on GitHub Pages) -->
-<div style="max-width:900px;">
-  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
-    <iframe
-      src="https://player.vimeo.com/video/1056472782?h=0&title=0&byline=0&portrait=0"
-      style="position:absolute; top:0; left:0; width:100%; height:100%;"
-      frameborder="0"
-      allow="autoplay; fullscreen; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
+## Modular, multifingered gripper
 
 
-## GRIPPER MOSAIC GIF
-## GRIPPER 3 views
+<img src="media/three_views_of_gripper.png" width="360">
 
 
 
