@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Reactive Slip Control in Multifingered Grasping
 ---
 
