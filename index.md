@@ -183,51 +183,18 @@ We target **slip-aware force coordination**: increase stability while preserving
   <img src="media/sensorshybrid.PNG" style="width:100%; height:auto; display:block;">
 </div>
 
-##  sensors signals 
-
-
-
-
 
 
 ---
 
 
 ## Method Overview
-We use a **hybrid learning + model-based** approach:
+
+## Method Overview
+We use a **hybrid learning + model-based** approach, with **two pipelines in parallel** and coupled through an **event-triggered feedback loop**:
 - **Learned slip perception** from high-bandwidth tactile cues (FFT + GRU)
 - **Online grasp model update** from contact localization
 - **Event-triggered internal-force optimization** to stabilize the grasp without disturbing the object wrench
-
-<!--
-<p>
-  <img src="media/rsc_overview.png" width="700" alt="Reactive slip control overview">
-</p>
--->
-
-
-
-<table>
-  <tr>
-    <td valign="middle" align="center" width="38%">
-      <img src="media/rsc_slip.png" width="280" alt="Image 1">
-    </td>
-    <td valign="middle" align="center" width="23%">
-      <img src="media/rsc_feedback.png" width="280" alt="Image 2">
-    </td>
-    <td valign="middle" align="center" width="38%">
-      <img src="media/rsc_geom.png" width="280" alt="Image 3">
-    </td>
-  </tr>
-</table>
-
-
-
-## Method Overview
-
-We run **two pipelines in parallel** and couple them through an **event-triggered feedback loop**:
-- **Slip perception** (PzE): FFT/GRU detects incipient slip from tactile vibrations
-- **Grasp update & control** (PzR + model): contact localization → grasp modeling → internal-force optimization
 
 <table style="width:100%; border-collapse:collapse; margin:16px 0;">
   <tr>
@@ -242,8 +209,6 @@ We run **two pipelines in parallel** and couple them through an **event-triggere
     </td>
   </tr>
 </table>
-
-<em>Overview: perception and control run concurrently; slip events trigger internal-force reallocation to stabilize the grasp.</em>
 
 
 <details>
@@ -421,9 +386,11 @@ We run **two pipelines in parallel** and couple them through an **event-triggere
 ---
 **Paper accepted at ICRA 2026**
 *Reactive Slip Control in Multifingered Grasping: Hybrid Tactile Sensing and Internal-Force Optimization*
+
 Théo Ayral, Saifeddine Aloui, Mathieu Grossard
 
 
 ## Contact
 Théo AYRAL
+
 CEA (Leti & List) · Université Paris-Saclay
