@@ -94,32 +94,6 @@ In parallel-jaw grippers, preventing slip is often handled by a simple scalar in
 In multi-finger grasps, the same strategy can inject an undesired net wrench and destabilize the object.
 We target **slip-aware force coordination**: increase stability while preserving the object-level wrench.
 
-<div style="width:40%; max-width:700px; min-width:320px; margin:16px auto;">
-  <table style="width:100%; border-collapse:collapse;">
-    <tr>
-      <td width="50%" valign="top" align="center" style="padding:8px;">
-        <img src="media/huynh_2020.png" style="width:100%; height:auto; display:block;" alt="Simple parallel-jaw gripper">
-        <div style="height:10px;"></div>
-        <strong>Simple gripper</strong>
-        <ul style="text-align:left; margin:8px 0 0 0;">
-          <li><strong>Parallel jaws</strong>, single DoF</li>
-          <li><strong>Scalar</strong> grasp-effort command</li>
-        </ul>
-      </td>
-
-      <td width="50%" valign="top" align="center" style="padding:8px;">
-        <img src="media/Trigrasp.png" style="width:100%; height:auto; display:block;" alt="Multi-digit gripper grasp">
-        <div style="height:10px;"></div>
-        <strong>Multi-digit gripper</strong>
-        <ul style="text-align:left; margin:8px 0 0 0;">
-          <li>Independent actuation of multiple-DoF fingers</li>
-          <li>Requires <strong>coordination</strong> of contact forces</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-</div>
-
 
 <div style="width:60%; max-width:980px; min-width:360px; margin:16px auto;">
   <table style="width:100%; border-collapse:collapse;">
@@ -138,7 +112,7 @@ We target **slip-aware force coordination**: increase stability while preserving
     <div style="text-align:center;">
       <strong>Simple gripper</strong>
     </div>
-    <ul style="text-align:left; margin:8px 0 0 18px;">
+    <ul style="text-align:left; margin:8px 0 0 8px;">
       <li><strong>Parallel jaws</strong>, single DoF</li>
       <li><strong>Scalar</strong> grasp-effort command</li>
     </ul>
@@ -148,7 +122,7 @@ We target **slip-aware force coordination**: increase stability while preserving
     <div style="text-align:center;">
       <strong>Multi-digit gripper</strong>
     </div>
-    <ul style="text-align:left; margin:8px 0 0 18px;">
+    <ul style="text-align:left; margin:8px 0 0 8px;">
       <li>Independent actuation of multiple-DoF fingers</li>
       <li>Requires <strong>coordination</strong> of contact forces</li>
     </ul>
