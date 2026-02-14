@@ -121,11 +121,53 @@ We target **slip-aware force coordination**: increase stability while preserving
 </div>
 
 
+<div style="width:60%; max-width:980px; min-width:360px; margin:16px auto;">
+  <table style="width:100%; border-collapse:collapse;">
+    
+    <!-- Row 1: images (kept smaller than the table width) -->
+    <tr>
+      <td width="50%" align="center" valign="middle" style="padding:8px;">
+        <img src="media/huynh_2020.png" style="width:70%; height:auto; display:block; margin:0 auto;" alt="Simple parallel-jaw gripper">
+      </td>
+      <td width="50%" align="center" valign="middle" style="padding:8px;">
+        <img src="media/Trigrasp.png" style="width:70%; height:auto; display:block; margin:0 auto;" alt="Multi-digit gripper grasp">
+      </td>
+    </tr>
+
+    <!-- Row 2: text (uses the full cell width, aligned nicely) -->
+    <tr>
+      <td width="50%" valign="top" style="padding:8px;">
+        <div style="text-align:left;">
+          <strong>Simple gripper</strong>
+          <ul style="margin:8px 0 0 18px;">
+            <li><strong>Parallel jaws</strong>, single DoF</li>
+            <li><strong>Scalar</strong> grasp-effort command</li>
+          </ul>
+        </div>
+      </td>
+      <td width="50%" valign="top" style="padding:8px;">
+        <div style="text-align:left;">
+          <strong>Multi-digit gripper</strong>
+          <ul style="margin:8px 0 0 18px;">
+            <li>Independent actuation of multiple-DoF fingers</li>
+            <li>Requires <strong>coordination</strong> of contact forces</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+</div>
+
+
+
+
+
 <em>Takeaway: slip recovery in multi-finger grasps is not a scalar “grip harder” action — it must coordinate contact forces.</em>
 
 
-+ PFANNE  ref ? 
-  
+
+
 
 
 ### Why internal forces matter
