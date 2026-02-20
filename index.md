@@ -17,8 +17,9 @@ title: Reactive Slip Control in Multifingered Grasping
 # Reactive Slip Control in Multifingered Grasping
 Hybrid Tactile Sensing and Internal-Force Optimization
 
-**Paper accepted at ICRA 2026**
+**Paper accepted for ICRA 2026**
 
+[https://arxiv.org/abs/2602.16127](https://arxiv.org/abs/2602.16127)
 
 Robotic manipulation in unstructured environments requires **stable grasps without excessive force**.
 Humans solve this by sensing **incipient slip** and modulating grip forces rapidly.
