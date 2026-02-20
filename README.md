@@ -22,4 +22,5 @@ Théo Ayral, Saifeddine Aloui, Mathieu Grossard
 ➡️ This work is part of the PhD thesis  
 **Learning-based slip detection for adaptive grasp control**  
 Théo AYRAL
-CEA (Leti & List) · Université Paris-Saclay
+CEA (Leti & List) · Université Paris-Saclay  
+[https://github.com/thayral/PhD-manipulation](https://github.com/thayral/PhD-manipulation)  
