@@ -56,7 +56,7 @@ keywords : grasp stability, internal forces, slip detection, multifingered gripp
       <div style="font-size:0.95em; color:#444; line-height:1.2;">
         <strong>TraceBot use-case & platform context</strong><br>
         <a href="https://thayral.github.io/PhD-manipulation/" style="color:#444; text-decoration:underline;">
-          Learn more on my PhD page (setup, sensors, demos)
+          Learn more on my PhD page <br> (setup, sensors, demos)
         </a>
       </div>
 
