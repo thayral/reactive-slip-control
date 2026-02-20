@@ -29,12 +29,7 @@ This project investigates **learning-based slip detection** integrated into an *
 keywords : grasp stability, internal forces, slip detection, multifingered gripper
 
 <p style="margin-top:0.5rem;">
-  <a href="#publications">Publications</a> ·
-  <a href="#code--resources">Code & Resources</a> ·
-  <a href="#setup--benches">Setup</a> ·
-  <a href="#method">Method</a> ·
-  <a href="#results">Results</a> ·
-  <a href="#latency">Latency</a>
+  <a href="#contact">contact</a>
 </p>
 
 ---
@@ -290,10 +285,9 @@ We use a **hybrid learning + model-based** approach, with **two pipelines in par
 - RSC triggers after ~**130 ms**  
 - ~**19 mm** object travel before stop
 
-<p>
+<p align="center">
   <img src="media/Trigrasp_full_vertical.png" width="600" alt="Experimental validation figure">
 </p>
-
 
 
 
