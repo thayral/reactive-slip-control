@@ -73,12 +73,12 @@ keywords : grasp stability, internal forces, slip detection, multifingered gripp
 
 
 ## CONTRIBUTION
-*Closed-loop grasp adjustment*
-Stabilize multi-fingered grasp without explicit friction models.
+*Closed-loop grasp adjustment*  
+**Stabilize** multi-fingered grasp without explicit friction models, under **unknown perturbations**.
 
-Closed-loop adaptation of grasp forces
-Stabilize multi-finger grasps by injecting internal forces without explicit friction models
-Tactile feedback loop leveraging slip detection for short reaction time
+- Closed-loop adaptation of grasp forces **without explicit friction models**  
+- Stabilize **multi-finger grasps** by injecting internal forces   
+- Tactile feedback loop leveraging slip detection for **short reaction time**  
 
 ---
 
