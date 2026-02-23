@@ -1,8 +1,3 @@
----
-title: Reactive Slip Control in Multifingered Grasping
----
-
-
 <script>
   window.MathJax = {
     tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] },
