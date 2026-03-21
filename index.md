@@ -214,6 +214,12 @@ We use a **hybrid learning + model-based** approach, with **two pipelines in par
 </table>
 
 
+
+
+ <img src="media/Neo rsc overview bold n.png" style="width:100%; height:auto; display:block;" alt="Reactive Slip Control Overview">
+
+ 
+
 <details>
   <summary><strong>Slip perception (PzE): training benches and signals</strong></summary>
 
