@@ -199,6 +199,7 @@ We use a **hybrid learning + model-based** approach, with **two pipelines in par
 - **Online grasp model update** from contact localization
 - **Event-triggered internal-force optimization** to stabilize the grasp without disturbing the object wrench
 
+ <!--
 <table style="width:100%; border-collapse:collapse; margin:16px 0;">
   <tr>
     <td valign="middle" align="center" width="38%">
@@ -212,7 +213,7 @@ We use a **hybrid learning + model-based** approach, with **two pipelines in par
     </td>
   </tr>
 </table>
-
+ -->
 
 
 
