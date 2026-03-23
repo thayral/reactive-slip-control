@@ -199,21 +199,7 @@ We use a **hybrid learning + model-based** approach, with **two pipelines in par
 - **Online grasp model update** from contact localization
 - **Event-triggered internal-force optimization** to stabilize the grasp without disturbing the object wrench
 
- <!--
-<table style="width:100%; border-collapse:collapse; margin:16px 0;">
-  <tr>
-    <td valign="middle" align="center" width="38%">
-      <img src="media/rsc_slip.png" style="width:100%; height:auto; display:block;" alt="Slip perception pipeline (PzE)">
-    </td>
-    <td valign="middle" align="center" width="24%">
-      <img src="media/rsc_feedback.png" style="width:100%; height:auto; display:block;" alt="Event-triggered feedback loop">
-    </td>
-    <td valign="middle" align="center" width="38%">
-      <img src="media/rsc_geom.png" style="width:100%; height:auto; display:block;" alt="Grasp modeling + internal-force optimization (PzR)">
-    </td>
-  </tr>
-</table>
- -->
+
 
 
 
