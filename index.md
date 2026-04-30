@@ -25,7 +25,7 @@ This project investigates **learning-based slip detection** integrated into an *
 keywords : grasp stability, internal forces, slip detection, multifingered gripper
 
 <p style="margin-top:0.5rem;">
-  <a href="#contact">contact</a>
+  <a href="#contact">contact: Théo AYRAL</a>
 </p>
 
 ---
